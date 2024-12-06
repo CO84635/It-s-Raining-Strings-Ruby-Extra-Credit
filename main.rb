@@ -12,7 +12,7 @@ loop do
     end
 
     business_list.push(business_input)
-    business_list.sort!
+    business_list = business_list.sort_by { |business| business.downcase }
 
     puts "\nYour businesses are:"
     business_list.each { |business| puts business }
